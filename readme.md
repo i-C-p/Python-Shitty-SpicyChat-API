@@ -1,6 +1,6 @@
 ## Example Usage
 
-To get your auth key go to the website https://spicychat.ai/ make sure you are registered into the your account. Press f12 to open devtools or right-click, inspect. Go to the Network tab press f5 and then press ctrl+f type there authorization or bearer find your auth key.
+To get your auth key go to https://spicychat.ai/ and make sure you are registered with your account. press f12 or right click to open devtools, inspect. Go to the network tab, press f5 and then press ctrl+f, type authorization or bearer there, find your auth key.
 
 ```python
 from spicychat import spicy
