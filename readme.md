@@ -36,133 +36,25 @@ PIP:
 pip install spicy-chat-ai
 ```
 
-## Usage
-
-You can call the functions like that:
-
-```python
-from spicychat import spicy
+## With this you can:
+```bash
+Change your username,
+Change your name,
+Change your highlights,
+```
+## Bot Profile
+```bash
+Change your bot name,
+Change your bot greeting,
+Change your bot title,
+Change your bot visibility,
+Change your bot persona,
+Change your bot avatar,
+Change your bot openai key,
+Change your openAiMode,
+```
+## Bot Chat
+```bash
+Send Messages to spicyChat Bots
 ```
 
-call class like that:
-
-```python
-s = spicy(
-    auth = "your-auth-key",
-)
-```
-
-You can use these methods now:
-
-## Change your username
-
-To change your username, all you need to do is this:
-
-```python
-response = s.username("your_username")
-print(response)
-```
-
-## Change your name
-
-To change your name, all you need to do is this:
-
-```python
-response = s.name("your_name")
-print(response)
-```
-
-## Change your highlights
-
-To change your highlights, all you need to do is this:
-
-```python
-response = s.highlights("your_highlights")
-print(response)
-```
-
-## Change your bot name
-
-To change your bot name, all you need to do is this:
-
-```python
-response = s.bot_name("your_bot_name")
-print(response)
-```
-
-## Change your bot greeting
-
-To change your greeting, all you need to do is this:
-
-```python
-response = s.greeting("greeting")
-print(response)
-```
-
-## Change your bot title
-
-To change your title, all you need to do is this:
-
-```python
-response = s.title("title")
-print(response)
-```
-
-## Change your bot visibility
-
-To change your visibility, all you need to do is this:
-
-```python
-response = s.title("visibility") #public - private - permanent private
-print(response)
-```
-
-## Change your bot persona
-
-To change your persona, all you need to do is this:
-
-```python
-response = s.persona("persona")
-print(response)
-```
-
-## Change your bot avatar
-
-To change your avatar, all you need to do is this:
-
-```python
-response = s.avatar_url("avatar_url")
-print(response)
-```
-
-
-## Change your bot openai_api_key_url
-
-To change your title, all you need to do is this:
-
-```python
-response = s.openai_api_key_url("openai_api_key_url")
-print(response)
-```
-
-## Change your bot openai_mode
-
-To change your openai_mode, all you need to do is this:
-
-```python
-response = s.openai_mode("openai_mode")
-print(response)
-```
-
-## SEND MESSAGES TO SPICY CHATS BOTS
-
-To send messages, all you need to do is this:
-
-```python
-response = s.send_message("your-message", "chat-id", "conv-id")
-print(response)
-```
-
-To get chat-id open a bot from spicy chat and you can see the chat id in the link.
-
-To get conv-id open a bot from spicy chat press f12, go to the network tab, press f5, send message to the bot, and now i believe you can see the chat thing click it, click payload, and now you can see the conv-id. copy and paste it. (if it is none press f5 do same things again)
