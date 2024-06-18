@@ -28,14 +28,6 @@ YOU: hello
 *But even though she was scared and needy, there was something else there too - gratitude. Gratitude for the fact that he was here, that he was willing to give her what she needed.*
 ```
 
-## Installation
-
-PIP:
-
-```bash
-pip install spicy-chat-ai
-```
-
 ## With this you can:
 
 ```bash
