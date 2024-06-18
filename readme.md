@@ -41,7 +41,7 @@ pip install spicy-chat-ai
 You can call the functions like that:
 
 ```python
-from figgs import figgs
+from spicyChat import spicy
 ```
 
 call class like that:
