@@ -37,12 +37,12 @@ pip install spicy-chat-ai
 ```
 
 ## With this you can:
+
 ```bash
 Change your username,
 Change your name,
 Change your highlights,
 ```
-## Bot Profile
 ```bash
 Change your bot name,
 Change your bot greeting,
@@ -53,7 +53,6 @@ Change your bot avatar,
 Change your bot openai key,
 Change your openAiMode,
 ```
-## Bot Chat
 ```bash
 Send Messages to spicyChat Bots
 ```
