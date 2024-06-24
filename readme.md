@@ -7,16 +7,10 @@ To get your auth key go to this website: https://spicychat.ai/ and make sure you
 ```python
 from spicychat import spicy
 
-auth ="your-auth-key"
-char_id = "char-id"
-conv_id = "conv-id"
-
-s = spicy(
-    auth=auth
-)
+s = spicy()
 while True:
     msg = input("You: ")
-    resp = s.send_message(msg, char_id, conv_id)
+    resp = s.send_message(msg)
     print(resp)
 ```
 ## OUTPUT:
