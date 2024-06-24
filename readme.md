@@ -1,3 +1,5 @@
+### An Api For SpicyChatAI
+![](https://github.com/DeoDorqnt387/Python-Shitty-SpicyChat-API/blob/main/images/1.png)
 ## Example Usage
 
 To get your auth key go to this website: https://spicychat.ai/ and make sure you are registered into the your account. press f12. Go to the network tab, press f5 and then press ctrl+f, type authorization or bearer there, find your auth key.
