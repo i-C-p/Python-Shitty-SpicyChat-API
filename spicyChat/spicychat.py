@@ -1,14 +1,20 @@
 import requests
+import os
 
 from bs4 import BeautifulSoup
 from urllib3.exceptions import InsecureRequestWarning
 from urllib3 import disable_warnings
+from dotenv import load_dotenv
 
+load_dotenv()
 disable_warnings(InsecureRequestWarning)
 
+auth = os.getenv("AUTH")
+char_id = os.getenv("CHAR_ID")
+conv_id = os.getenv("CONV_ID")
+
 class spicy:
-    def __init__(self,url="https://spicychat.ai/", auth=None):
-        self.auth = auth
+    def __init__(self,url="https://spicychat.ai/"):
         self.url = url
     def fetch_page(self):
         response = requests.get(self.url, verify=False)
@@ -25,7 +31,7 @@ class spicy:
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.auth}"
+                "Authorization": f"Bearer {auth}"
             }
             payload = {
                 "username": username
@@ -44,7 +50,7 @@ class spicy:
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.auth}"
+                "Authorization": f"Bearer {auth}"
             }
             payload = {
                 "name": name
@@ -63,7 +69,7 @@ class spicy:
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.auth}"
+                "Authorization": f"Bearer {auth}"
             }
             payload = {
                 "highlights": highlights
@@ -83,7 +89,7 @@ class spicy:
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.auth}"
+                "Authorization": f"Bearer {auth}"
             }
             payload = {
                 "name": name
@@ -101,7 +107,7 @@ class spicy:
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.auth}"
+                "Authorization": f"Bearer {auth}"
             }
             payload = {
                 "greeting": greeting
@@ -119,7 +125,7 @@ class spicy:
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.auth}"
+                    "Authorization": f"Bearer {auth}"
                 }
                 payload = {
                     "title": title
@@ -138,7 +144,7 @@ class spicy:
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.auth}"
+                    "Authorization": f"Bearer {auth}"
                 }
                 payload = {
                     "visibility": visibility
@@ -157,7 +163,7 @@ class spicy:
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.auth}"
+                    "Authorization": f"Bearer {auth}"
                 }
                 payload = {
                     "persona": persona
@@ -175,7 +181,7 @@ class spicy:
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.auth}"
+                    "Authorization": f"Bearer {auth}"
                 }
                 payload = {
                     "avatar_url": avatar_url
@@ -193,7 +199,7 @@ class spicy:
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.auth}"
+                    "Authorization": f"Bearer {auth}"
                 }
                 payload = {
                     "openai_api_key": openai_api_key
@@ -211,7 +217,7 @@ class spicy:
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {self.auth}"
+                    "Authorization": f"Bearer {auth}"
                 }
                 payload = {
                     "openai_mode": openai_mode
@@ -223,14 +229,14 @@ class spicy:
             else:
                 print("url not found")
     #MESSAGE
-    def send_message(self, message:str, char_id: str, conv_id : str):
+    def send_message(self, message:str):
         soup = self.fetch_page()
         if soup:
             headers ={
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.auth}"
+                "Authorization": f"Bearer {auth}"
             }
             payload = {
                 "message": message,
