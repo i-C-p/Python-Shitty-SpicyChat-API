@@ -25,23 +25,29 @@ class spicy:
             return None
     #CHARACTER 
     def username(self, username:str):
-        soup = self.fetch_page()
-        if soup:
-            headers ={
-                ""User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
-                "Accept": "*/*",
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {auth}"
-            }
-            payload = {
-                "username": username
-            }
-            api_url = "https://4mpanjbsf6.execute-api.us-east-1.amazonaws.com/users"
-            response = requests.patch(api_url, headers=headers, json=payload, verify = False)
-            data = response.json()
-            return data["username"]
-        else:
-            print("url not found")
+    soup = self.fetch_page()
+    if soup:
+        headers ={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
+            "Accept": "*/*",
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {auth}"
+        }
+        payload = {
+            "username": username
+        }
+        api_url = "https://4mpanjbsf6.execute-api.us-east-1.amazonaws.com/users"
+        response = requests.patch(api_url, headers=headers, json=payload, verify = False)
+        
+        # PRINT THE RESPONSE FOR DEBUGGING
+        print(f"API Response Status: {response.status_code}")
+        print(f"API Response: {response.json()}")
+        
+        data = response.json()
+        return data.get("username", "Username key not found in response")
+    else:
+        print("URL not found")
+
 
     def name(self, name:str):
         soup = self.fetch_page()
