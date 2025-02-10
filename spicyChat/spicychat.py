@@ -25,7 +25,7 @@ class spicy:
             return None
             
   
-    def username(self, username:str):
+def username(self, username:str):
     soup = self.fetch_page()
     if soup:
         headers = {
@@ -40,14 +40,21 @@ class spicy:
         api_url = "https://4mpanjbsf6.execute-api.us-east-1.amazonaws.com/users"
         response = requests.patch(api_url, headers=headers, json=payload, verify=False)
         
-        # Debugging the response
+        # **NEW DEBUGGING LINES:**
         print(f"API Response Status: {response.status_code}")
-        print(f"API Response JSON: {response.json()}")  # Add this to see what the API returns
+        print(f"API Response Text: {response.text}")  # This prints the raw response
         
-        data = response.json()
-        return data.get("username", "Username key not found in response")  # Use .get() to prevent KeyError
+        try:
+            data = response.json()
+            print(f"API Response JSON: {data}")  # Print the actual JSON response
+
+            return data.get("username", "❌ 'username' key not found in response")
+        except Exception as e:
+            print(f"❌ JSON Decode Error: {e}")
+            return "Response is not JSON"
+
     else:
-        print("URL not found")
+        print("❌ URL not found")
 
 
     def name(self, name:str):
