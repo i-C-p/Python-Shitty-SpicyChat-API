@@ -24,11 +24,11 @@ class spicy:
             print(f"Request failed with status code {response.status_code}")
             return None
             
-    #CHARACTER 
+  
     def username(self, username:str):
     soup = self.fetch_page()
     if soup:
-        headers ={
+        headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
             "Accept": "*/*",
             "Content-Type": "application/json",
@@ -38,14 +38,14 @@ class spicy:
             "username": username
         }
         api_url = "https://4mpanjbsf6.execute-api.us-east-1.amazonaws.com/users"
-        response = requests.patch(api_url, headers=headers, json=payload, verify = False)
+        response = requests.patch(api_url, headers=headers, json=payload, verify=False)
         
-        # PRINT THE RESPONSE FOR DEBUGGING
+        # Debugging the response
         print(f"API Response Status: {response.status_code}")
-        print(f"API Response: {response.json()}")
+        print(f"API Response JSON: {response.json()}")  # Add this to see what the API returns
         
         data = response.json()
-        return data.get("username", "Username key not found in response")
+        return data.get("username", "Username key not found in response")  # Use .get() to prevent KeyError
     else:
         print("URL not found")
 
