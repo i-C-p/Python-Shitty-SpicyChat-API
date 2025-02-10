@@ -23,6 +23,7 @@ class spicy:
         else:
             print(f"Request failed with status code {response.status_code}")
             return None
+            
     #CHARACTER 
     def username(self, username:str):
     soup = self.fetch_page()
