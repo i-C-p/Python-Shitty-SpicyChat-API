@@ -29,8 +29,9 @@ def username(self, username:str):
     soup = self.fetch_page()
     if soup:
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
-            "Accept": "*/*",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
+    "Accept": "*/*"
+
             "Content-Type": "application/json",
             "Authorization": f"Bearer {auth}"
         }
@@ -60,9 +61,10 @@ def username(self, username:str):
     def name(self, name:str):
         soup = self.fetch_page()
         if soup:
-            headers ={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
-                "Accept": "*/*",
+           headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
+    "Accept": "*/*"
+
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {auth}"
             }
@@ -79,9 +81,9 @@ def username(self, username:str):
     def highlights(self, highlights:str):
         soup = self.fetch_page()
         if soup:
-            headers ={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
-                "Accept": "*/*",
+         headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
+    "Accept": "*/*"
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {auth}"
             }
@@ -100,7 +102,7 @@ def username(self, username:str):
         soup = self.fetch_page()
         if soup:
             headers ={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {auth}"
@@ -118,7 +120,7 @@ def username(self, username:str):
         soup = self.fetch_page()
         if soup:
             headers ={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {auth}"
@@ -136,7 +138,7 @@ def username(self, username:str):
             soup = self.fetch_page()
             if soup:
                 headers ={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {auth}"
@@ -155,7 +157,7 @@ def username(self, username:str):
             soup = self.fetch_page()
             if soup:
                 headers ={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {auth}"
@@ -174,7 +176,7 @@ def username(self, username:str):
             soup = self.fetch_page()
             if soup:
                 headers ={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {auth}"
@@ -192,7 +194,7 @@ def username(self, username:str):
             soup = self.fetch_page()
             if soup:
                 headers ={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {auth}"
@@ -210,7 +212,7 @@ def username(self, username:str):
             soup = self.fetch_page()
             if soup:
                 headers ={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {auth}"
@@ -228,7 +230,7 @@ def username(self, username:str):
             soup = self.fetch_page()
             if soup:
                 headers ={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                     "Accept": "*/*",
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {auth}"
@@ -247,7 +249,7 @@ def username(self, username:str):
         soup = self.fetch_page()
         if soup:
             headers ={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.160 Safari/537.36",
                 "Accept": "*/*",
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {auth}"
