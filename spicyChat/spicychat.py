@@ -248,7 +248,6 @@ class spicy:
             api_url = "https://chat.nd-api.com/chat"
             response = requests.post(api_url, headers=headers, json=payload, verify = False)
             data = response.json()
-            bot_msg = data["message"]["content"]
-            return bot_msg
+            return data
         else:
             print("url not found")
