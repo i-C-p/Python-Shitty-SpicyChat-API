@@ -44,7 +44,7 @@ class spicy:
             try:
                 data = response.json()
                 print(f"API Response JSON: {data}")
-                return data.get("username", "❌ 'username' key not found in response")
+                return data
             except Exception as e:
                 print(f"❌ JSON Decode Error: {e}")
                 return "Response is not JSON"
