@@ -39,7 +39,7 @@ class spicy:
             api_url = "https://4mpanjbsf6.execute-api.us-east-1.amazonaws.com/users"
             response = requests.patch(api_url, headers=headers, json=payload, verify = False)
             data = response.json()
-            return data["username"]
+            return data
         else:
             print("url not found")
 
